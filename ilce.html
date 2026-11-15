@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">İzmir İlçe Klima ve Kombi Servisi | Veta Teknik Servis</title>
+    <meta name="description" content="İzmir ve çevre ilçelerde aynı gün yerinde klima ve kombi teknik servis hizmeti.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        veta: { green: '#0b4a2b', greenLight: '#157a46', cream: '#faf8f2', dark: '#0f172a' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 pb-28 md:pb-0">
+
+    <!-- Üst Bar -->
+    <div class="bg-veta-dark text-white text-xs sm:text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <span><i class="fa-solid fa-location-dot text-emerald-400 mr-1"></i> İzmir, Tire, Ödemiş ve Bayındır Mobil Servis Ağı</span>
+            <a href="tel:05335593599" class="hover:text-emerald-400 font-semibold"><i class="fa-solid fa-phone mr-1"></i> 0533 559 35 99</a>
+        </div>
+    </div>
+
+    <!-- Header & Mobil Menü -->
+    <header class="sticky top-0 z-40 bg-veta-cream/95 backdrop-blur-md border-b border-emerald-900/10 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo.png" alt="Veta Teknik Servis" class="h-14 w-auto object-contain">
+            </a>
+            <!-- Masaüstü Menü -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-700">
+                <a href="index.html" class="hover:text-veta-green">Anasayfa</a>
+                <a href="index.html#markalar" class="hover:text-veta-green">Markalar</a>
+                <a href="index.html#ilceler" class="hover:text-veta-green">İlçeler</a>
+                <a href="index.html#sss" class="hover:text-veta-green">S.S.S.</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/905335593599" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold px-4 py-2.5 rounded-xl transition">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
+                </a>
+                <a href="tel:05335593599" class="hidden sm:inline-flex items-center gap-2 bg-veta-green text-white text-sm font-bold px-4 py-2.5 rounded-xl transition shadow-md">
+                    <i class="fa-solid fa-phone-volume"></i> 0533 559 35 99
+                </a>
+                <!-- Mobil Menü Butonu -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-veta-dark text-2xl p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobil Açılır Menü -->
+        <div id="mobileMenu" class="hidden md:hidden bg-veta-cream border-b border-emerald-900/10 px-6 py-4 space-y-3 font-semibold text-slate-700 shadow-lg">
+            <a href="index.html" onclick="toggleMobileMenu()" class="block py-2 border-b border-slate-200">Anasayfa</a>
+            <a href="index.html#markalar" onclick="toggleMobileMenu()" class="block py-2 border-b border-slate-200">Markalar</a>
+            <a href="index.html#ilceler" onclick="toggleMobileMenu()" class="block py-2 border-b border-slate-200">İlçeler</a>
+            <a href="index.html#sss" onclick="toggleMobileMenu()" class="block py-2">S.S.S.</a>
+        </div>
+    </header>
+
+    <!-- İlçe İçerik Alanı -->
+    <main class="py-16 max-w-4xl mx-auto px-4">
+        <div class="mb-6 text-sm text-slate-500 flex items-center gap-2">
+            <a href="index.html" class="hover:text-veta-green font-semibold">Anasayfa</a>
+            <span>/</span>
+            <span id="breadcrumbIlce" class="text-veta-dark font-bold uppercase">İlçe</span>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm text-center">
+            <span class="inline-block bg-emerald-900/10 text-veta-green font-bold text-xs px-3.5 py-1.5 rounded-full mb-4 uppercase" id="badgeIlce">
+                İZMİR İLÇE SERVİSİ
+            </span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-veta-dark leading-tight mb-6" id="ilceBaslik">
+                İzmir İlçe Klima ve Kombi Servisi
+            </h1>
+            <p class="text-slate-600 text-base sm:text-lg mb-10 max-w-2xl mx-auto leading-relaxed" id="ilceAciklama">
+                Bölgenizdeki klima ve kombi arızaları, periyodik bakımlar ve orijinal yedek parça değişimleri için aynı gün yerinde servis hizmeti sunuyoruz.
+            </p>
+
+            <!-- İletişim Butonları (Hemen Ara & WhatsApp) -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:05335593599" class="bg-veta-green hover:bg-veta-greenLight text-white font-bold px-8 py-4 rounded-2xl shadow-lg transition flex items-center justify-center gap-2 text-base">
+                    <i class="fa-solid fa-phone-volume"></i> Hemen Ara: 0533 559 35 99
+                </a>
+                <a href="https://wa.me/905335593599" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-2xl shadow-lg transition flex items-center justify-center gap-2 text-base">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp Destek
+                </a>
+            </div>
+        </div>
+
+        <!-- Ek Bilgilendirme Kartları -->
+        <div class="grid sm:grid-cols-3 gap-6 mt-12">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center shadow-sm">
+                <div class="w-12 h-12 rounded-xl bg-emerald-900/10 text-veta-green flex items-center justify-center text-xl mx-auto mb-3"><i class="fa-solid fa-clock"></i></div>
+                <h3 class="font-bold text-veta-dark mb-1">Aynı Gün Servis</h3>
+                <p class="text-xs text-slate-500">Bölgenizdeki mobil ekiplerimizle hızlı müdahale.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center shadow-sm">
+                <div class="w-12 h-12 rounded-xl bg-emerald-900/10 text-veta-green flex items-center justify-center text-xl mx-auto mb-3"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3 class="font-bold text-veta-dark mb-1">1 Yıl Garanti</h3>
+                <p class="text-xs text-slate-500">Değişen parça ve işçilikte resmi 1 yıl garanti.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center shadow-sm">
+                <div class="w-12 h-12 rounded-xl bg-emerald-900/10 text-veta-green flex items-center justify-center text-xl mx-auto mb-3"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                <h3 class="font-bold text-veta-dark mb-1">Orijinal Parça</h3>
+                <p class="text-xs text-slate-500">%100 marka uyumlu orijinal yedek parça kullanımı.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-veta-dark text-slate-400 text-xs py-14 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 space-y-4 leading-relaxed">
+            <p><strong>Yetkili servis değildir. Garanti dışı cihazlara özel servis.</strong> Bu site, ilgili markaların resmi veya yetkili servisi değildir. Sunulan hizmetler özel servis kapsamında verilmektedir. Marka isimleri ve logoları, tüketiciyi bilgilendirme amacıyla kullanılmaktadır. Resmi yetkimiz bulunmayan markalar için özel servis / bağımsız teknik servis olarak hizmet veriyoruz. Sitemizde 'yetkili servis' ibaresi kullanılmaz. Firmamız, ilgili markalardan bağımsız olarak hizmet veren Özel Teknik Servis merkezidir. Sitemizde adı geçen marka ve logolar ilgili firmalara aittir. Servisimiz, garanti süresi dolmuş cihazlara ücretli onarım desteği sunmaktadır. Değişimi yapılan yedek parçalar firmamız bünyesinde 1 Yıl Garanti kapsamındadır. Servis kaydı oluşturulduğunda teknisyenlerimiz adresinize gelerek arıza tespiti yapar ve onayınız dahilinde işlem başlatılır.</p>
+            
+            <p>Bu site, adı geçen markaların resmi veya yetkili servisi değildir. Sunulan tüm hizmetler özel / bağımsız teknik servis kapsamında verilmektedir. Marka isimleri yalnızca bilgilendirme amaçlı kullanılmaktadır. Firmamız, ilgili markalardan bağımsız olarak hizmet vermektedir. Garanti süresi dolmuş cihazlara ücretli onarım hizmeti sunulmaktadır.</p>
+
+            <p><strong>Yasal Uyarı:</strong> Bu site, ilgili markaların resmi yetkili servisi değildir. Markadan bağımsız "Özel Servis" olarak hizmet vermektedir. Sitede kullanılan logolar ve marka isimleri, ilgili hak sahiplerine aittir ve sadece bilgi verme amaçlı kullanılmıştır. Firmamız, garanti süresi bitmiş cihazlara ücretli teknik destek sağlamaktadır.</p>
+
+            <p><strong>Yasal Uyarı ve Bilgilendirme:</strong> Bu internet sitesi üzerinden sunulan tüm hizmetler, ilgili marka veya markaların resmi, yetkili, ana servis ya da üretici destek ağı kapsamında yer almamaktadır. Firmamız; üretici, ithalatçı veya distribütör firmalardan tamamen bağımsız olarak faaliyet gösteren, özel servis statüsünde hizmet sunan bir teknik servis kuruluşudur. Web sitemizde adı geçen marka isimleri, ürün adları, model bilgileri ve logolar; yalnızca tüketicilere cihaz uyumluluğu ve hizmet kapsamı hakkında bilgi verilmesi amacıyla kullanılmaktadır. Bu kullanım, ilgili markalar ile firmamız arasında herhangi bir yetkilendirme, temsil, lisans, sponsorluk veya ticari ortaklık ilişkisi bulunduğu anlamına gelmez. Firmamız, ilgili markaların resmi servis prosedürleri, garanti koşulları, fiyat politikaları veya kampanyaları üzerinde herhangi bir yetkiye sahip değildir. Garanti süresi devam eden ürünler için kullanıcıların, ilgili markanın resmi yetkili servisleri ile doğrudan iletişime geçmeleri önerilmektedir. Sitemizde yer alan içeriklerde, reklam alanlarında veya hizmet açıklamalarında "yetkili servis", "resmi servis" ya da benzeri ifadeler kullanılmamakta olup, tüm servis faaliyetleri özel teknik servis kapsamında yürütülmektedir. Sunulan teknik servis hizmetleri; bakım, onarım, arıza tespiti, parça değişimi ve teknik destek işlemlerini kapsamakta olup, ağırlıklı olarak garanti süresi sona ermiş cihazlar için ücretli olarak sağlanmaktadır. Servis talebi oluşturulmasının ardından, alanında deneyimli teknisyenlerimiz müşterinin belirtmiş olduğu adrese yönlendirilir ve cihaz üzerinde detaylı bir arıza tespit süreci gerçekleştirilir. Tespit edilen arıza durumu, yapılması planlanan işlemler, kullanılacak yedek parçalar ve toplam hizmet bedeli, müşteriye açık ve şeffaf bir şekilde bildirilir. Müşteri onayı alınmadan herhangi bir onarım, parça değişimi veya müdahalede bulunulmaz. Onaylanarak değişimi yapılan parçayı kapsamakta olup; kullanıcı hataları, harici müdahaleler, sıvı teması, voltaj dalgalanmaları veya kullanım koşullarına aykırı durumları kapsam dışı bırakabilir. İşçilik ve servis süreçleri, yürürlükteki tüketici mevzuatına ve hizmet sözleşmelerine uygun şekilde yürütülmektedir. Sitemizde yer alan tüm içerikler, bilgilendirme amaçlı olarak hazırlanmış olup; zaman içerisinde güncellenebilir, değiştirilebilir veya kaldırılabilir. Firmamız, site içeriğinde yer alan bilgilerin doğruluğu ve güncelliği konusunda azami özeni göstermesine rağmen, oluşabilecek yazım hataları, teknik aksaklıklar veya üçüncü taraf kaynaklı bilgi değişikliklerinden sorumlu tutulamaz. Kullanıcılar, siteyi ziyaret ederek ve hizmet talebi oluşturarak bu bilgilendirme ve yasal uyarı metnini okumuş ve kabul etmiş sayılır. Firmamız, yürürlükteki yasa ve yönetmelikler çerçevesinde faaliyet göstermekte olup; tüketici haklarına, şeffaf hizmet anlayışına ve dürüst ticari uygulamalara önem vermektedir. Hizmetlerimiz ile ilgili her türlü soru, görüş ve talep için iletişim kanallarımız üzerinden tarafımızla iletişime geçilebilir.</p>
+
+            <p><strong>Politika ve Etik Uyum Taahhüdü:</strong> Bu web sitesinde sunulan tüm hizmetler ve yayınlanan reklamlar; Google Ads reklam politikaları, tüketicinin korunması mevzuatı ve etik ticaret kurallarına uygun olarak yürütülmektedir. Özellikle Google Ads'in "Kabul Edilemez İş Uygulamaları (Unacceptable Business Practices)" politikası kapsamında; Kullanıcıları yanıltan, yanlış yönlendiren veya aldatıcı ifadeler kullanılmamaktadır. Yetkili servis, resmi temsilci veya marka ortağı izlenimi oluşturacak hiçbir içerik, görsel veya reklam metni yer almamaktadır. Hizmet koşulları, servis kapsamı, ücretlendirme ve garanti durumu açık ve şeffaf şekilde belirtilmektedir. Tüketicinin karar verme sürecini manipüle eden, baskı kuran veya yanıltıcı ticari uygulamalardan kaçınılmaktadır. Marka haklarını ihlal eden veya haksız rekabete yol açabilecek herhangi bir reklam faaliyeti yürütülmemektedir. Amacımız, kullanıcıların doğru bilgiye ulaşmasını sağlamak ve güvenilir, şeffaf bir servis deneyimini sunmaktır.</p>
+
+            <p><strong>Yasal Bilgilendirme ve Marka Bağımsızlığı:</strong> Bu web sitesi, bağımsız bir özel teknik servis tarafından işletilmektedir. Sunulan hizmetler, ilgili markaların yetkili servis hizmetleri değildir. Web sitemizde adı geçen marka, logo ve ticari unvanlar ilgili firmaların tescilli markalarıdır ve yalnızca cihazların hangi markalara ait olduğunu belirtmek amacıyla kullanılmaktadır. İlgili markalar ile herhangi bir resmî ortaklık, yetkilendirme veya distribütörlük ilişkimiz bulunmamaktadır. Tüm servis hizmetleri, garanti kapsamı dışında kalan cihazlar için sunulmakta olup, kullanıcılar bu konuda açık ve şeffaf şekilde bilgilendirilmektedir. Google Ads reklam politikaları, tüketici mevzuatı ve haksız rekabet kurallarına uygun şekilde faaliyet göstermekteyiz. Kullanıcıları yanıltıcı, yetkili servis izlenimi oluşturan veya marka haklarını ihlal eden hiçbir reklam ve içerik kullanılmamaktadır. Şeffaflık ve kullanıcı güveni önceliğimizdir. Google Ads tarafından tanımlanan kabul edilmez iş uygulamalarına karşı sıfır tolerans politikası uygulanmaktadır.</p>
+
+            <p><strong>Google Ads Politika ve Şeffaf Bildirimi:</strong> Bu web sitesi, bağımsız ve özel bir teknik servis tarafından işletilmektedir. Sunulan hizmetler, ilgili markaların yetkili servis hizmetleri değildir. Sitemizde adı geçen marka isimleri, cihazların hangi markalara ait olduğunu belirtmek amacıyla kullanılmaktadır. İlgili markalar ile herhangi bir resmî ortaklık, yetkilendirme veya distribütörlük ilişkimiz bulunmamaktadır. Marka logo ve görselleri kullanılmamaktadır. Tüm servis hizmetleri, garanti kapsamı dışında kalan cihazlar için sunulmakta olup; hizmet koşulları, servis kapsamı, ücretlendirme ve garanti durumu kullanıcıya açık ve şeffaf şekilde bildirilmektedir. Google Ads reklam politikaları kapsamında tanımlanan yanıltıcı beyanlar, yetkili servis izlenimi oluşturma, haksız rekabet, kabul edilemez iş uygulamaları ve aldatıcı ticari faaliyetlerden kesinlikle kaçınılmaktadır. Kullanıcıları yanlış yönlendirecek, baskı oluşturacak veya gerçeğe aykırı bilgi içeren reklam ve içerikler yayınlanmamaktadır. Google Ads'in "Unacceptable Business Practices (Kabul Edilemez İş Uygulamaları)" politikasına karşı sıfır tolerans yaklaşımı benimsenmektedir. Amacımız, kullanıcıların doğru bilgiye ulaşmasını sağlamak ve güvenilir, şeffaf bir teknik servis sunmaktır. Bu site Google Ads politikalarına, tüketici mevzuatına ve etik ticaret kurallarına uygun şekilde faaliyet göstermektedir. Yetkili servis değildir. Garanti dışı cihazlara özel servis.</p>
+            
+            <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500">
+                <div>
+                    <p class="font-bold text-slate-400">VETA TEKNİK SERVİS</p>
+                    <p>İzmir, Tire, Ödemiş ve Bayındır Klima ve Kombi Teknik Servis Hizmetleri</p>
+                </div>
+                <div class="text-center sm:text-right">
+                    <p>© 2026 Tüm hakları saklıdır. | 0533 559 35 99</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobil Sabit Alt Bar -->
+    <div class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white border-t border-slate-200 grid grid-cols-2 shadow-2xl">
+        <a href="tel:05335593599" class="flex items-center justify-center gap-2 bg-veta-green text-white font-bold py-3.5 text-sm">
+            <i class="fa-solid fa-phone-volume"></i> Hemen Ara
+        </a>
+        <a href="https://wa.me/905335593599" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600 text-white font-bold py-3.5 text-sm">
+            <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
+        </a>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // URL'den ilçe parametresini alıp sayfaya dinamik olarak yansıtma
+        const urlParams = new URLSearchParams(window.location.search);
+        const ilceParam = urlParams.get('ilce');
+        if (ilceParam) {
+            const ilceAdi = ilceParam.toUpperCase();
+            document.getElementById('pageTitle').innerText = `İzmir ${ilceAdi} Klima ve Kombi Servisi | Veta Teknik Servis`;
+            document.getElementById('breadcrumbIlce').innerText = `İZMİR ${ilceAdi}`;
+            document.getElementById('badgeIlce').innerText = `İZMİR ${ilceAdi} SERVİSİ`;
+            document.getElementById('ilceBaslik').innerText = `İzmir ${ilceParam} Klima ve Kombi Servisi`;
+            document.getElementById('ilceAciklama').innerText = `İzmir ${ilceParam} bölgesindeki klima ve kombi arızaları, periyodik bakımlar ve orijinal yedek parça değişimleri için aynı gün yerinde servis hizmeti sunuyoruz.`;
+        }
+    </script>
+</body>
+</html>

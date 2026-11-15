@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+:root {
+    --veta-green: #0b4a2b;
+    --veta-green-light: #157a46;
+    --veta-cream: #faf8f2;
+    --veta-dark: #0f172a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    padding-bottom: 70px;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding-bottom: 0;
+    }
+}
+
+.font-display {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.bg-grid-pattern {
+    background-image: linear-gradient(to right, rgba(11, 74, 43, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(11, 74, 43, 0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+/* Akordeon SSS Stilleri */
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.faq-item.active .faq-content {
+    max-height: 200px;
+}
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}

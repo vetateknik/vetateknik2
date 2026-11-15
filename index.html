@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İzmir Klima ve Kombi Servisi | Veta Teknik Servis</title>
+    <meta name="description" content="İzmir Klima ve Kombi Servisi - Aynı gün yerinde müdahale, periyodik bakım ve garantili onarım.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        veta: { green: '#0b4a2b', greenLight: '#157a46', cream: '#faf8f2', dark: '#0f172a' }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 pb-28 md:pb-0">
+
+    <!-- Üst Bar -->
+    <div class="bg-veta-dark text-white text-xs sm:text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <span><i class="fa-solid fa-location-dot text-emerald-400 mr-1"></i> İzmir Mobil Servis Ağı</span>
+            <a href="tel:05335583599" class="hover:text-emerald-400 font-semibold"><i class="fa-solid fa-phone mr-1"></i> 0533 559 35 99</a>
+        </div>
+    </div>
+
+    <!-- Header & Mobil Menü -->
+    <header class="sticky top-0 z-40 bg-veta-cream/95 backdrop-blur-md border-b border-emerald-900/10 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo.jpeg" alt="Veta Teknik Servis" class="h-14 w-auto object-contain">
+            </a>
+            <!-- Masaüstü Menü -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-700">
+                <a href="klima-servisi.html" class="hover:text-veta-green">Klima Servisi</a>
+                <a href="kombi-servisi.html" class="hover:text-veta-green">Kombi Servisi</a>
+                <a href="#markalar" class="hover:text-veta-green">Markalar</a>
+                <a href="#ilceler" class="hover:text-veta-green">İlçeler</a>
+                <a href="#sss" class="hover:text-veta-green">S.S.S.</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/905335583599" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold px-4 py-2.5 rounded-xl transition">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
+                </a>
+                <a href="tel:05335583599" class="hidden sm:inline-flex items-center gap-2 bg-veta-green text-white text-sm font-bold px-4 py-2.5 rounded-xl transition shadow-md">
+                    <i class="fa-solid fa-phone-volume"></i> 0533 558 35 99
+                </a>
+                <!-- Mobil Menü Butonu -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-veta-dark text-2xl p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobil Açılır Menü -->
+        <div id="mobileMenu" class="hidden md:hidden bg-veta-cream border-b border-emerald-900/10 px-6 py-4 space-y-3 font-semibold text-slate-700 shadow-lg">
+            <a href="klima-servisi.html" onclick="toggleMobileMenu()" class="block py-2 border-b border-slate-200">Klima Servisi</a>
+            <a href="kombi-servisi.html" onclick="toggleMobileMenu()" class="block py-2 border-b border-slate-200">Kombi Servisi</a>
+            <a href="#markalar" onclick="toggleMobileMenu()" class="block py-2 border-b border-slate-200">Markalar</a>
+            <a href="#ilceler" onclick="toggleMobileMenu()" class="block py-2 border-b border-slate-200">İlçeler</a>
+            <a href="#sss" onclick="toggleMobileMenu()" class="block py-2">S.S.S.</a>
+        </div>
+    </header>
+
+    <!-- Hero / Karşılama -->
+    <section class="relative bg-veta-cream bg-grid-pattern py-16 border-b border-emerald-900/10">
+        <div class="max-w-7xl mx-auto px-4 text-center max-w-3xl">
+            <span class="inline-block bg-emerald-900/10 text-veta-green font-bold text-xs px-3.5 py-1.5 rounded-full mb-4">
+                İZMİR VE ÇEVRESİ UZMAN TEKNİK SERVİSİ
+            </span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-veta-dark leading-tight mb-6">
+                Aynı Gün Yerinde <span class="text-veta-green">Klima & Kombi</span> Çözümleri
+            </h1>
+            <p class="text-slate-600 text-lg mb-8">
+                Orijinal yedek parça, 1 yıl işçilik garantisi ve şeffaf fiyat politikasıyla İzmir geneline profesyonel teknik servis hizmeti sunuyoruz.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:05335593599" class="bg-veta-green hover:bg-veta-greenLight text-white font-bold px-8 py-4 rounded-2xl shadow-lg transition">
+                    <i class="fa-solid fa-phone mr-2"></i> Hemen Ara: 0533 559 35 99
+                </a>
+                <a href="https://wa.me/905335593599" target="_blank" class="bg-white hover:bg-slate-50 text-veta-dark border-2 border-emerald-600 font-bold px-8 py-4 rounded-2xl transition">
+                    <i class="fa-brands fa-whatsapp text-emerald-600 mr-2"></i> WhatsApp Destek
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HİZMETLERİMİZ BÖLÜMÜ -->
+    <section class="py-16 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="inline-block bg-emerald-900/10 text-veta-green font-extrabold text-xs uppercase tracking-widest px-4 py-2 rounded-full mb-3">
+                HİZMETLERİMİZ
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-veta-dark">Profesyonel Klima ve Kombi Çözümleri</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Klima Kartı -->
+            <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+                <div>
+                    <div class="mb-6 overflow-hidden rounded-2xl h-48 bg-slate-100 flex items-center justify-center">
+                        <img src="klima-servisi.png" alt="Klima Servisi" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="w-1.5 h-6 bg-veta-green rounded-full"></span>
+                        <h3 class="text-2xl font-bold text-veta-dark">Klima Servisi ve Bakım</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                        Mevsimsel konfor için kritik öneme sahip olan <strong class="text-veta-dark">klima servisi</strong>, sezon öncesi mutlaka yaptırılmalıdır. Klima soğutmuyor, su akıtıyor veya klima çalışmıyor gibi sorunlar genellikle filtre kirliliği, gaz kaçağı veya kompresör arızasından kaynaklanır. Klima gaz dolumu ve klima bakım işlemleri, uzman teknisyenler tarafından titizlikle gerçekleştirilir.
+                    </p>
+                </div>
+                <a href="klima-servisi.html" class="inline-flex items-center justify-center gap-2 bg-veta-dark text-white font-bold px-6 py-3.5 rounded-xl text-sm transition hover:bg-slate-800">
+                    Klima Detayları <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Kombi Kartı -->
+            <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+                <div>
+                    <div class="mb-6 overflow-hidden rounded-2xl h-48 bg-slate-100 flex items-center justify-center">
+                        <img src="kombi1.png" alt="Kombi Servisi" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="w-1.5 h-6 bg-veta-green rounded-full"></span>
+                        <h3 class="text-2xl font-bold text-veta-dark">Kombi Servisi Sistemleri</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                        Kış aylarının vazgeçilmezi olan kombi cihazları için <strong class="text-veta-dark">kombi servisi</strong> ve yıllık bakım zorunludur. Kombi ateşleme yapmıyor, kombi petek ısıtmıyor, kombi su akıtıyor veya kombi basınç düşüyor gibi arızalar genellikle bakım eksikliğinden kaynaklanır. Düzenli kombi bakımı ile hem enerji tasarrufu sağlanır hem de cihazın ömrü uzar.
+                    </p>
+                </div>
+                <a href="kombi-servisi.html" class="inline-flex items-center justify-center gap-2 bg-veta-green text-white font-bold px-6 py-3.5 rounded-xl text-sm transition hover:bg-veta-greenLight">
+                    Kombi Detayları <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEKNİK DİYAGNOZ SÜRECİ -->
+    <section class="py-16 bg-veta-dark text-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full">TEKNİK DİYAGNOZ</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-3">Teknik Diyagnoz Süreci</h2>
+            </div>
+            <p class="text-slate-300 text-center max-w-3xl mx-auto mb-10 text-base leading-relaxed">
+                Tüm markalar teknolojisi, yüksek hassasiyetli elektronik kontrol sistemleri ve çok katmanlı güvenlik protokolleriyle donatılmıştır. Profesyonel müdahale gerektiren bu sistemlerde yapılacak her işlem, ESD korumalı ortamda ve marka spesifik test ekipmanlarıyla gerçekleştirilmelidir.
+            </p>
+            <div class="grid sm:grid-cols-2 gap-4">
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex items-center gap-4">
+                    <i class="fa-solid fa-check text-emerald-400 text-lg"></i>
+                    <span class="font-semibold text-sm sm:text-base">Anakart ve Elektronik Kart Diyagnozu</span>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex items-center gap-4">
+                    <i class="fa-solid fa-check text-emerald-400 text-lg"></i>
+                    <span class="font-semibold text-sm sm:text-base">Sensör Kalibrasyon ve Tepki Süresi Testi</span>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex items-center gap-4">
+                    <i class="fa-solid fa-check text-emerald-400 text-lg"></i>
+                    <span class="font-semibold text-sm sm:text-base">Motor ve Kompresör Performans Analizi</span>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex items-center gap-4">
+                    <i class="fa-solid fa-check text-emerald-400 text-lg"></i>
+                    <span class="font-semibold text-sm sm:text-base">Yazılım Versiyon Kontrolü ve Güncelleme</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KALİTE STANDARTLARI -->
+    <section class="py-16 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="text-veta-green font-bold text-xs uppercase tracking-widest bg-emerald-900/10 px-3 py-1 rounded-full">GÜVENCE</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-veta-dark mt-3">Veta Teknik Servis Kalite Standartları</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto mt-2">Yetkisiz veya deneyimsiz müdahaleler cihazınızın güvenlik sistemlerini devre dışı bırakabilir. Sertifikalı teknisyenlerimizle standartlara tam uyumlu hizmet sunuyoruz.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 text-center shadow-sm">
+                <span class="text-4xl font-extrabold text-slate-300 block mb-3">01</span>
+                <h3 class="font-bold text-lg text-veta-dark mb-2">Güvenlik Kontrolü</h3>
+                <p class="text-xs text-slate-500">Elektrik ve gaz sızıntılarına karşı eksiksiz güvenlik testleri.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 text-center shadow-sm">
+                <span class="text-4xl font-extrabold text-slate-300 block mb-3">02</span>
+                <h3 class="font-bold text-lg text-veta-dark mb-2">Orijinal Parça</h3>
+                <p class="text-xs text-slate-500">Cihaz ömrünü uzatan %100 orijinal ve uyumlu yedek parça kullanımı.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 text-center shadow-sm">
+                <span class="text-4xl font-extrabold text-slate-300 block mb-3">03</span>
+                <h3 class="font-bold text-lg text-veta-dark mb-2">Fonksiyon Testi</h3>
+                <p class="text-xs text-slate-500">Onarım sonrası tüm fonksiyonların detaylı performans testi.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 text-center shadow-sm">
+                <span class="text-4xl font-extrabold text-slate-300 block mb-3">04</span>
+                <h3 class="font-bold text-lg text-veta-dark mb-2">Garanti Belgesi</h3>
+                <p class="text-xs text-slate-500">Yapılan işçilik ve değişen parçalar için resmi 1 yıl garanti belgesi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVİS HİZMET KAPSAMI -->
+    <section class="py-16 bg-veta-cream border-y border-emerald-900/10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-veta-green font-bold text-xs uppercase tracking-widest bg-emerald-900/10 px-3 py-1 rounded-full">KAPSAM</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-veta-dark mt-3">Servis Hizmet Kapsamı</h2>
+                <p class="text-slate-600 mt-2">İzmir Bölgesi Kapsamlı Hizmet Paketi</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-900/10 text-veta-green flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <div>
+                        <h3 class="font-bold text-lg text-veta-dark mb-1">Kapsamlı Bakım Hizmeti</h3>
+                        <p class="text-sm text-slate-600">Cihazınızın performansını korumak için detaylı temizlik, filtre değişimi ve mekanik kontroller yapılır.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-900/10 text-veta-green flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-microchip"></i></div>
+                    <div>
+                        <h3 class="font-bold text-lg text-veta-dark mb-1">Elektronik Kart Tamiri</h3>
+                        <p class="text-sm text-slate-600">Tüm markalar orijinal anakart, kontrol kartı ve power board onarımları titizlikle yapılır.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-900/10 text-veta-green flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-gears"></i></div>
+                    <div>
+                        <h3 class="font-bold text-lg text-veta-dark mb-1">Mekanik Parça Değişimi</h3>
+                        <p class="text-sm text-slate-600">Motor, pompa, rulman ve kayış gibi yıpranan parçaların orijinal yedeklerle değişimi sağlanır.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-900/10 text-veta-green flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div>
+                        <h3 class="font-bold text-lg text-veta-dark mb-1">Sızıntı ve Kaçak Tespiti</h3>
+                        <p class="text-sm text-slate-600">Gaz, su ve hava kaçaklarının hassas cihazlarla tespit edilip profesyonelce giderilmesi yapılır.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFESYONEL SERVİS AVANTAJLARI -->
+    <section class="py-16 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="text-veta-green font-bold text-xs uppercase tracking-widest bg-emerald-900/10 px-3 py-1 rounded-full">AVANTAJLAR</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-veta-dark mt-3">Profesyonel Servis Avantajları</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 text-center shadow-sm border-t-4 border-t-emerald-500">
+                <span class="text-4xl font-black text-emerald-600 block mb-2">%35</span>
+                <h3 class="font-bold text-lg text-veta-dark mb-2">Enerji Tasarrufu</h3>
+                <p class="text-sm text-slate-600">Düzenli bakımlı cihazlar daha az elektrik tüketir ve fatura tasarrufu sağlar.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 text-center shadow-sm border-t-4 border-t-red-500">
+                <span class="text-4xl font-black text-red-600 block mb-2">+6 Yıl</span>
+                <h3 class="font-bold text-lg text-veta-dark mb-2">Uzun Ömür</h3>
+                <p class="text-sm text-slate-600">Orijinal parça kullanımı ve profesyonel müdahale cihaz ömrünü önemli ölçüde uzatır.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 text-center shadow-sm border-t-4 border-t-blue-500">
+                <span class="text-4xl font-black text-blue-600 block mb-2">2 Saat</span>
+                <h3 class="font-bold text-lg text-veta-dark mb-2">Hızlı Müdahale</h3>
+                <p class="text-sm text-slate-600">Acil durumlarda maksimum 2 saat içinde bölgenizde servis desteği sağlanır.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- YAYGIN ARIZA TİPLERİ -->
+    <section class="py-16 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="text-veta-green font-bold text-xs uppercase tracking-widest bg-emerald-900/10 px-3 py-1 rounded-full">UZMAN ÇÖZÜM</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-veta-dark mt-3">Yaygın Arıza Tipleri</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                <div class="text-red-500 text-2xl mb-3"><i class="fa-solid fa-bolt"></i></div>
+                <h3 class="font-bold text-lg text-veta-dark mb-2">Güç Kaynağı ve Besleme Problemleri</h3>
+                <p class="text-sm text-slate-600">Şebeke voltaj dalgalanmaları cihazın elektronik kartlarına zarar verir. Cihaz çalışmaz veya sürekli sigorta atar.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                <div class="text-orange-500 text-2xl mb-3"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+                <h3 class="font-bold text-lg text-veta-dark mb-2">Sıcaklık Kontrol Arızaları</h3>
+                <p class="text-sm text-slate-600">Termostat veya NTC sensör hatası nedeniyle cihaz istenen sıcaklığa ulaşamaz veya aşırı ısınır.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                <div class="text-veta-green text-2xl mb-3"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <h3 class="font-bold text-lg text-veta-dark mb-2">Mekanik Gürültü ve Titreşim</h3>
+                <p class="text-sm text-slate-600">Rulman eskimesi, motor arızası veya dengesizlik kaynaklı yüksek sesli çalışma ve titreşim sorunları.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARKA BAZLI UZMAN SERVİS HİZMETLERİ -->
+    <section class="py-16 bg-veta-dark text-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full">MARKA AĞI</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-3">Marka Bazlı Uzman Servis Hizmetleri</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Türk Markaları -->
+                <div class="bg-white/5 border border-white/10 p-6 rounded-3xl">
+                    <h3 class="text-emerald-400 font-extrabold text-lg mb-4 border-b border-white/10 pb-2">TÜRK MARKALARI</h3>
+                    <ul class="space-y-3 text-sm font-semibold text-slate-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-400"></i> Arçelik Servisi</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-400"></i> Beko Servisi</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-400"></i> Vestel Servisi</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-400"></i> Profilo Servisi</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-400"></i> Altus Servisi</li>
+                    </ul>
+                </div>
+                <!-- Avrupa Markaları -->
+                <div class="bg-white/5 border border-white/10 p-6 rounded-3xl">
+                    <h3 class="text-emerald-400 font-extrabold text-lg mb-4 border-b border-white/10 pb-2">AVRUPA MARKALARI</h3>
+                    <ul class="space-y-3 text-sm font-semibold text-slate-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-400"></i> Bosch Servisi</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-400"></i> Siemens Servisi</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-400"></i> Electrolux Servisi</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-400"></i> AEG Servisi</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-400"></i> Grundig Servisi</li>
+                    </ul>
+                </div>
+                <!-- Global Markalar -->
+                <div class="bg-white/5 border border-white/10 p-6 rounded-3xl">
+                    <h3 class="text-emerald-400 font-extrabold text-lg mb-4 border-b border-white/10 pb-2">GLOBAL MARKALAR</h3>
+                    <ul class="space-y-3 text-sm font-semibold text-slate-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-400"></i> Samsung Servisi</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-400"></i> LG Servisi</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-400"></i> Whirlpool Servisi</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-400"></i> Daikin Servisi</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-arrow-right text-xs text-emerald-400"></i> Mitsubishi Servisi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KURUMSAL KİMLİK (Misyon, Vizyon, Değerler) -->
+    <section class="py-16 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="text-veta-green font-bold text-xs uppercase tracking-widest bg-emerald-900/10 px-3 py-1 rounded-full">KURUMSAL KİMLİK</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-veta-dark mt-3">Güvenilir Servis, Profesyonel Çözüm</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto mt-2">2010 yılından beri sektörde faaliyet gösteren Veta Teknik Servis, İzmir ve çevresinde lider teknik servis kuruluşudur.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <div class="w-12 h-12 rounded-xl bg-emerald-900/10 text-veta-green flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-bullseye"></i></div>
+                <h3 class="font-bold text-lg text-veta-dark mb-2">Misyonumuz</h3>
+                <p class="text-sm text-slate-600">Müşterilerimize en hızlı, en kaliteli ve en güvenilir teknik servis hizmetini sunmak.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <div class="w-12 h-12 rounded-xl bg-emerald-900/10 text-veta-green flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-eye"></i></div>
+                <h3 class="font-bold text-lg text-veta-dark mb-2">Vizyonumuz</h3>
+                <p class="text-sm text-slate-600">Bölgenin en çok tercih edilen ve güvenilen teknik servis markası olmak.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <div class="w-12 h-12 rounded-xl bg-emerald-900/10 text-veta-green flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-gem"></i></div>
+                <h3 class="font-bold text-lg text-veta-dark mb-2">Değerlerimiz</h3>
+                <p class="text-sm text-slate-600">Dürüstlük, şeffaflık, kalite ve müşteri odaklılık temel değerlerimizdir.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEDEN VETA TEKNİK SERVİS? -->
+    <section class="py-16 bg-veta-dark text-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold">Neden Veta Teknik Servis?</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex items-center gap-4">
+                    <span class="w-8 h-8 rounded-full bg-red-600 text-white font-bold flex items-center justify-center text-sm shrink-0">1</span>
+                    <span class="font-bold text-base">15+ Yıllık Sektör Tecrübesi</span>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex items-center gap-4">
+                    <span class="w-8 h-8 rounded-full bg-red-600 text-white font-bold flex items-center justify-center text-sm shrink-0">2</span>
+                    <span class="font-bold text-base">%100 Orijinal Yedek Parça</span>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex items-center gap-4">
+                    <span class="w-8 h-8 rounded-full bg-red-600 text-white font-bold flex items-center justify-center text-sm shrink-0">3</span>
+                    <span class="font-bold text-base">1 Yıl Tam Garanti</span>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex items-center gap-4">
+                    <span class="w-8 h-8 rounded-full bg-red-600 text-white font-bold flex items-center justify-center text-sm shrink-0">4</span>
+                    <span class="font-bold text-base">7/24 Acil Servis</span>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex items-center gap-4">
+                    <span class="w-8 h-8 rounded-full bg-red-600 text-white font-bold flex items-center justify-center text-sm shrink-0">5</span>
+                    <span class="font-bold text-base">Şeffaf Fiyatlandırma</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVİS SÜRECİ (4 ADIMDA PROFESYONELLİK) -->
+    <section class="py-16 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="text-veta-green font-bold text-xs uppercase tracking-widest bg-emerald-900/10 px-3 py-1 rounded-full">SÜREÇ</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-veta-dark mt-3">Servis Süresi & İşleyiş</h2>
+            <p class="text-slate-600 mt-2">// 4 Adımda Profesyonellik</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 text-center shadow-sm">
+                <div class="w-14 h-14 rounded-full bg-veta-dark text-white font-bold flex items-center justify-center text-xl mx-auto mb-4 shadow-md">01</div>
+                <h3 class="font-bold text-lg text-veta-dark mb-2">Arıza Kaydı</h3>
+                <p class="text-xs text-slate-500">Çağrı merkezimize ulaşarak arıza detaylarını bildirin, randevu alın.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 text-center shadow-sm">
+                <div class="w-14 h-14 rounded-full bg-veta-dark text-white font-bold flex items-center justify-center text-xl mx-auto mb-4 shadow-md">02</div>
+                <h3 class="font-bold text-lg text-veta-dark mb-2">Yerinde Tespit</h3>
+                <p class="text-xs text-slate-500">Uzman teknisyen adresinize gelir, arıza tespiti yapar ve fiyat bilgisi verir.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 text-center shadow-sm">
+                <div class="w-14 h-14 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-xl mx-auto mb-4 shadow-md">03</div>
+                <h3 class="font-bold text-lg text-veta-dark mb-2">Onarım İşlemi</h3>
+                <p class="text-xs text-slate-500">Onayınız sonrası orijinal yedek parça ile profesyonel tamir yapılır.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 text-center shadow-sm">
+                <div class="w-14 h-14 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-xl mx-auto mb-4 shadow-md">04</div>
+                <h3 class="font-bold text-lg text-veta-dark mb-2">Test & Teslim</h3>
+                <p class="text-xs text-slate-500">Cihaz test edilir, garanti belgesi verilir ve ödeme yapılır.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Canlı Destek -->
+    <section class="bg-veta-dark text-white py-16 my-8">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="w-16 h-16 rounded-2xl bg-white/10 text-emerald-400 flex items-center justify-center text-3xl mx-auto mb-6">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+            <h2 class="text-3xl font-bold mb-3">Canlı Destek & Arıza Kaydı</h2>
+            <p class="text-slate-400 mb-8">Uzman ekibimiz sorularınızı yanıtlamak ve servis talebi oluşturmak için hazır.</p>
+            <a href="tel:05335593599" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-2xl px-10 py-5 rounded-2xl shadow-xl transition">
+                0533 559 35 99
+            </a>
+        </div>
+    </section>
+
+    <!-- GENİŞLETİLMİŞ MARKA LİSTESİ -->
+    <section id="markalar" class="py-16 max-w-7xl mx-auto px-4">
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
+            <h2 class="text-2xl font-bold text-veta-dark mb-6 text-center">MARKA LİSTESİ</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-3">
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Arçelik</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Beko</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Vestel</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Profilo</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Altus</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Regal</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">SEG</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Finlux</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Vestfrost</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Uğur</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Simfer</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Kumtel</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Silverline</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Termikel</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Luxell</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Grundig</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Bosch</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Siemens</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Samsung</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">LG</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Electrolux</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">AEG</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Whirlpool</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Hotpoint</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Indesit</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Ariston</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Hoover</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Candy</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Gorenje</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Teka</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Zanussi</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Blomberg</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Bauknecht</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Franke</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Haier</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Hisense</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Midea</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">TCL</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Sharp</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Daewoo</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Miele</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Liebherr</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Smeg</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Asko</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Sub-Zero</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Amana</div>
+                <div class="bg-slate-50 border border-slate-200 py-3 px-4 rounded-xl text-center text-sm font-bold text-slate-700">Westinghouse</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İZMİR İLÇELERİ -->
+    <section id="ilceler" class="py-16 max-w-7xl mx-auto px-4">
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm max-w-2xl mx-auto">
+            <h2 class="text-2xl font-bold text-veta-dark mb-6 text-center">İZMİR İLÇELERİ</h2>
+            <div class="max-h-96 overflow-y-auto space-y-2 pr-2">
+                <script>
+                    const ilceler = ["Aliağa", "Balçova", "Bayındır", "Bayraklı", "Bergama", "Beydağ", "Bornova", "Buca", "Çeşme", "Çiğli", "Dikili", "Foça", "Gaziemir", "Güzelbahçe", "Karabağlar", "Karaburun", "Karşıyaka", "Kemalpaşa", "Kınık", "Kiraz", "Konak", "Menderes", "Menemen", "Narlıdere", "Ödemiş", "Seferihisar", "Selçuk", "Tire", "Torbalı", "Urla"];
+                    ilceler.forEach(ilce => {
+                        document.write(`
+                            <a href="ilce.html?ilce=${encodeURIComponent(ilce)}" class="flex items-center justify-between p-4 rounded-xl bg-slate-50 hover:bg-emerald-50 hover:text-veta-green border border-slate-200 font-bold transition">
+                                <span>${ilce.toUpperCase()}</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </a>
+                        `);
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIKÇA SORULAN SORULAR (SSS) -->
+    <section id="sss" class="py-16 max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-veta-dark mb-8 text-center">Sıkça Sorulan Sorular</h2>
+        <div class="space-y-4">
+            <div class="faq-item bg-white border border-slate-200 rounded-2xl p-6 shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+                <div class="flex justify-between items-center font-bold text-lg text-veta-dark">
+                    <span>Garanti süresi ne kadardır?</span>
+                    <i class="faq-icon fa-solid fa-chevron-down transition-transform"></i>
+                </div>
+                <div class="faq-content text-slate-600 text-sm mt-3">
+                    Değiştirilen tüm orijinal parçalar ve yapılan işçilik için 1 yıl tam garanti veriyoruz. Garanti belgesi ile birlikte cihazınız teslim edilir.
+                </div>
+            </div>
+
+            <div class="faq-item bg-white border border-slate-200 rounded-2xl p-6 shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+                <div class="flex justify-between items-center font-bold text-lg text-veta-dark">
+                    <span>İzmir bölgesinde evime gelir misiniz?</span>
+                    <i class="faq-icon fa-solid fa-chevron-down transition-transform"></i>
+                </div>
+                <div class="faq-content text-slate-600 text-sm mt-3">
+                    Evet, İzmir, Tire, Ödemiş ve Bayındır başta olmak üzere çevre ilçelerde yerinde servis hizmeti sunuyoruz. Randevu için bizi arayabilirsiniz.
+                </div>
+            </div>
+
+            <div class="faq-item bg-white border border-slate-200 rounded-2xl p-6 shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+                <div class="flex justify-between items-center font-bold text-lg text-veta-dark">
+                    <span>Orijinal yedek parça kullanıyor musunuz?</span>
+                    <i class="faq-icon fa-solid fa-chevron-down transition-transform"></i>
+                </div>
+                <div class="faq-content text-slate-600 text-sm mt-3">
+                    Evet, sadece %100 orijinal ve marka standartlarına uygun yedek parçalar kullanıyoruz. Kalitesiz yan sanayi ürünleri asla kullanılmaz.
+                </div>
+            </div>
+
+            <div class="faq-item bg-white border border-slate-200 rounded-2xl p-6 shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+                <div class="flex justify-between items-center font-bold text-lg text-veta-dark">
+                    <span>Randevu almak zorunlu mu?</span>
+                    <i class="faq-icon fa-solid fa-chevron-down transition-transform"></i>
+                </div>
+                <div class="faq-content text-slate-600 text-sm mt-3">
+                    Randevu ile daha hızlı hizmet alabilirsiniz. Ancak acil durumlarda randevusuz da destek sağlıyoruz. 7/24 destek hattımızdan bize ulaşabilirsiniz.
+                </div>
+            </div>
+
+            <div class="faq-item bg-white border border-slate-200 rounded-2xl p-6 shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+                <div class="flex justify-between items-center font-bold text-lg text-veta-dark">
+                    <span>Ödeme nasıl yapılır?</span>
+                    <i class="faq-icon fa-solid fa-chevron-down transition-transform"></i>
+                </div>
+                <div class="faq-content text-slate-600 text-sm mt-3">
+                    Nakit, kredi kartı ve havale ile ödeme kabul ediyoruz. Tamir tamamlandıktan sonra ödeme yapabilirsiniz. Taksit seçeneklerimiz de mevcuttur.
+                </div>
+            </div>
+
+            <div class="faq-item bg-white border border-slate-200 rounded-2xl p-6 shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+                <div class="flex justify-between items-center font-bold text-lg text-veta-dark">
+                    <span>Garanti dışı cihazları da tamir ediyor musunuz?</span>
+                    <i class="faq-icon fa-solid fa-chevron-down transition-transform"></i>
+                </div>
+                <div class="faq-content text-slate-600 text-sm mt-3">
+                    Evet, garanti süresi dolmuş veya garantisi olmayan tüm cihazlar için profesyonel tamir hizmeti sunuyoruz. Üstelik kendi garantimizi veriyoruz.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GÜVENİLİR SERVİS HİZMETİ BANNER -->
+    <section class="py-12 max-w-5xl mx-auto px-4">
+        <div class="bg-gradient-to-br from-red-600 to-red-700 text-white rounded-3xl p-8 sm:p-12 text-center shadow-xl">
+            <h2 class="text-2xl sm:text-3xl font-extrabold mb-4">GÜVENİLİR SERVİS HİZMETİ</h2>
+            <p class="text-white/90 text-sm sm:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
+                Veta Teknik Servis güvencesiyle İzmir bölgesinde Tüm Markalar cihazlarınız için profesyonel çözüm. Hemen arayın!
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:05335593599" class="bg-veta-dark hover:bg-slate-900 text-white font-bold px-8 py-4 rounded-2xl shadow-md transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone"></i> HEMEN ARA
+                </a>
+                <a href="https://wa.me/905335593599" target="_blank" class="border-2 border-white hover:bg-white/10 text-white font-bold px-8 py-4 rounded-2xl transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-calendar-days"></i> RANDEVU AL
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (Tüm Yasal Uyarılar ve Detaylı Bilgilendirmeler Eklendi) -->
+    <footer class="bg-veta-dark text-slate-400 text-xs py-14 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 space-y-4 leading-relaxed">
+            <p><strong>Yetkili servis değildir. Garanti dışı cihazlara özel servis.</strong> Bu site, ilgili markaların resmi veya yetkili servisi değildir. Sunulan hizmetler özel servis kapsamında verilmektedir. Marka isimleri ve logoları, tüketiciyi bilgilendirme amacıyla kullanılmaktadır. Resmi yetkimiz bulunmayan markalar için özel servis / bağımsız teknik servis olarak hizmet veriyoruz. Sitemizde 'yetkili servis' ibaresi kullanılmaz. Firmamız, ilgili markalardan bağımsız olarak hizmet veren Özel Teknik Servis merkezidir. Sitemizde adı geçen marka ve logolar ilgili firmalara aittir. Servisimiz, garanti süresi dolmuş cihazlara ücretli onarım desteği sunmaktadır. Değişimi yapılan yedek parçalar firmamız bünyesinde 1 Yıl Garanti kapsamındadır. Servis kaydı oluşturulduğunda teknisyenlerimiz adresinize gelerek arıza tespiti yapar ve onayınız dahilinde işlem başlatılır.</p>
+            
+            <p>Bu site, adı geçen markaların resmi veya yetkili servisi değildir. Sunulan tüm hizmetler özel / bağımsız teknik servis kapsamında verilmektedir. Marka isimleri yalnızca bilgilendirme amaçlı kullanılmaktadır. Firmamız, ilgili markalardan bağımsız olarak hizmet vermektedir. Garanti süresi dolmuş cihazlara ücretli onarım hizmeti sunulmaktadır.</p>
+
+            <p><strong>Yasal Uyarı:</strong> Bu site, ilgili markaların resmi yetkili servisi değildir. Markadan bağımsız "Özel Servis" olarak hizmet vermektedir. Sitede kullanılan logolar ve marka isimleri, ilgili hak sahiplerine aittir ve sadece bilgi verme amaçlı kullanılmıştır. Firmamız, garanti süresi bitmiş cihazlara ücretli teknik destek sağlamaktadır.</p>
+
+            <p><strong>Yasal Uyarı ve Bilgilendirme:</strong> Bu internet sitesi üzerinden sunulan tüm hizmetler, ilgili marka veya markaların resmi, yetkili, ana servis ya da üretici destek ağı kapsamında yer almamaktadır. Firmamız; üretici, ithalatçı veya distribütör firmalardan tamamen bağımsız olarak faaliyet gösteren, özel servis statüsünde hizmet sunan bir teknik servis kuruluşudur. Web sitemizde adı geçen marka isimleri, ürün adları, model bilgileri ve logolar; yalnızca tüketicilere cihaz uyumluluğu ve hizmet kapsamı hakkında bilgi verilmesi amacıyla kullanılmaktadır. Bu kullanım, ilgili markalar ile firmamız arasında herhangi bir yetkilendirme, temsil, lisans, sponsorluk veya ticari ortaklık ilişkisi bulunduğu anlamına gelmez. Firmamız, ilgili markaların resmi servis prosedürleri, garanti koşulları, fiyat politikaları veya kampanyaları üzerinde herhangi bir yetkiye sahip değildir. Garanti süresi devam eden ürünler için kullanıcıların, ilgili markanın resmi yetkili servisleri ile doğrudan iletişime geçmeleri önerilmektedir. Sitemizde yer alan içeriklerde, reklam alanlarında veya hizmet açıklamalarında "yetkili servis", "resmi servis" ya da benzeri ifadeler kullanılmamakta olup, tüm servis faaliyetleri özel teknik servis kapsamında yürütülmektedir. Sunulan teknik servis hizmetleri; bakım, onarım, arıza tespiti, parça değişimi ve teknik destek işlemlerini kapsamakta olup, ağırlıklı olarak garanti süresi sona ermiş cihazlar için ücretli olarak sağlanmaktadır. Servis talebi oluşturulmasının ardından, alanında deneyimli teknisyenlerimiz müşterinin belirtmiş olduğu adrese yönlendirilir ve cihaz üzerinde detaylı bir arıza tespit süreci gerçekleştirilir. Tespit edilen arıza durumu, yapılması planlanan işlemler, kullanılacak yedek parçalar ve toplam hizmet bedeli, müşteriye açık ve şeffaf bir şekilde bildirilir. Müşteri onayı alınmadan herhangi bir onarım, parça değişimi veya müdahalede bulunulmaz. Onaylanarak değişimi yapılan parçayı kapsamakta olup; kullanıcı hataları, harici müdahaleler, sıvı teması, voltaj dalgalanmaları veya kullanım koşullarına aykırı durumları kapsam dışı bırakabilir. İşçilik ve servis süreçleri, yürürlükteki tüketici mevzuatına ve hizmet sözleşmelerine uygun şekilde yürütülmektedir. Sitemizde yer alan tüm içerikler, bilgilendirme amaçlı olarak hazırlanmış olup; zaman içerisinde güncellenebilir, değiştirilebilir veya kaldırılabilir. Firmamız, site içeriğinde yer alan bilgilerin doğruluğu ve güncelliği konusunda azami özeni göstermesine rağmen, oluşabilecek yazım hataları, teknik aksaklıklar veya üçüncü taraf kaynaklı bilgi değişikliklerinden sorumlu tutulamaz. Kullanıcılar, siteyi ziyaret ederek ve hizmet talebi oluşturarak bu bilgilendirme ve yasal uyarı metnini okumuş ve kabul etmiş sayılır. Firmamız, yürürlükteki yasa ve yönetmelikler çerçevesinde faaliyet göstermekte olup; tüketici haklarına, şeffaf hizmet anlayışına ve dürüst ticari uygulamalara önem vermektedir. Hizmetlerimiz ile ilgili her türlü soru, görüş ve talep için iletişim kanallarımız üzerinden tarafımızla iletişime geçilebilir.</p>
+
+            <p><strong>Politika ve Etik Uyum Taahhüdü:</strong> Bu web sitesinde sunulan tüm hizmetler ve yayınlanan reklamlar; Google Ads reklam politikaları, tüketicinin korunması mevzuatı ve etik ticaret kurallarına uygun olarak yürütülmektedir. Özellikle Google Ads'in "Kabul Edilemez İş Uygulamaları (Unacceptable Business Practices)" politikası kapsamında; Kullanıcıları yanıltan, yanlış yönlendiren veya aldatıcı ifadeler kullanılmamaktadır. Yetkili servis, resmi temsilci veya marka ortağı izlenimi oluşturacak hiçbir içerik, görsel veya reklam metni yer almamaktadır. Hizmet koşulları, servis kapsamı, ücretlendirme ve garanti durumu açık ve şeffaf şekilde belirtilmektedir. Tüketicinin karar verme sürecini manipüle eden, baskı kuran veya yanıltıcı ticari uygulamalardan kaçınılmaktadır. Marka haklarını ihlal eden veya haksız rekabete yol açabilecek herhangi bir reklam faaliyeti yürütülmemektedir. Amacımız, kullanıcıların doğru bilgiye ulaşmasını sağlamak ve güvenilir, şeffaf bir servis deneyimini sunmaktır.</p>
+
+            <p><strong>Yasal Bilgilendirme ve Marka Bağımsızlığı:</strong> Bu web sitesi, bağımsız bir özel teknik servis tarafından işletilmektedir. Sunulan hizmetler, ilgili markaların yetkili servis hizmetleri değildir. Web sitemizde adı geçen marka, logo ve ticari unvanlar ilgili firmaların tescilli markalarıdır ve yalnızca cihazların hangi markalara ait olduğunu belirtmek amacıyla kullanılmaktadır. İlgili markalar ile herhangi bir resmî ortaklık, yetkilendirme veya distribütörlük ilişkimiz bulunmamaktadır. Tüm servis hizmetleri, garanti kapsamı dışında kalan cihazlar için sunulmakta olup, kullanıcılar bu konuda açık ve şeffaf şekilde bilgilendirilmektedir. Google Ads reklam politikaları, tüketici mevzuatı ve haksız rekabet kurallarına uygun şekilde faaliyet göstermekteyiz. Kullanıcıları yanıltıcı, yetkili servis izlenimi oluşturan veya marka haklarını ihlal eden hiçbir reklam ve içerik kullanılmamaktadır. Şeffaflık ve kullanıcı güveni önceliğimizdir. Google Ads tarafından tanımlanan kabul edilmez iş uygulamalarına karşı sıfır tolerans politikası uygulanmaktadır.</p>
+
+            <p><strong>Google Ads Politika ve Şeffaflık Bildirimi:</strong> Bu web sitesi, bağımsız ve özel bir teknik servis tarafından işletilmektedir. Sunulan hizmetler, ilgili markaların yetkili servis hizmetleri değildir. Sitemizde adı geçen marka isimleri, cihazların hangi markalara ait olduğunu belirtmek amacıyla kullanılmaktadır. İlgili markalar ile herhangi bir resmî ortaklık, yetkilendirme veya distribütörlük ilişkimiz bulunmamaktadır. Marka logo ve görselleri kullanılmamaktadır. Tüm servis hizmetleri, garanti kapsamı dışında kalan cihazlar için sunulmakta olup; hizmet koşulları, servis kapsamı, ücretlendirme ve garanti durumu kullanıcıya açık ve şeffaf şekilde bildirilmektedir. Google Ads reklam politikaları kapsamında tanımlanan yanıltıcı beyanlar, yetkili servis izlenimi oluşturma, haksız rekabet, kabul edilemez iş uygulamaları ve aldatıcı ticari faaliyetlerden kesinlikle kaçınılmaktadır. Kullanıcıları yanlış yönlendirecek, baskı oluşturacak veya gerçeğe aykırı bilgi içeren reklam ve içerikler yayınlanmamaktadır. Google Ads'in "Unacceptable Business Practices (Kabul Edilemez İş Uygulamaları)" politikasına karşı sıfır tolerans yaklaşımı benimsenmektedir. Amacımız, kullanıcıların doğru bilgiye ulaşmasını sağlamak ve güvenilir, şeffaf bir teknik servis sunmaktır. Bu site Google Ads politikalarına, tüketici mevzuatına ve etik ticaret kurallarına uygun şekilde faaliyet göstermektedir. Yetkili servis değildir. Garanti dışı cihazlara özel servis.</p>
+            
+            <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500">
+                <div>
+                    <p class="font-bold text-slate-400">VETA TEKNİK SERVİS</p>
+                    <p>İZMİR Klima ve Kombi Teknik Servis Hizmetleri</p>
+                </div>
+                <div class="text-center sm:text-right">
+                    <p>© 2026 Tüm hakları saklıdır. | 0533 559 35 99</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobil Sabit Alt Bar -->
+    <div class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white border-t border-slate-200 grid grid-cols-2 shadow-2xl">
+        <a href="tel:05335593599" class="flex items-center justify-center gap-2 bg-veta-green text-white font-bold py-3.5 text-sm">
+            <i class="fa-solid fa-phone-volume"></i> Hemen Ara
+        </a>
+        <a href="https://wa.me/905335593599" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600 text-white font-bold py-3.5 text-sm">
+            <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
+        </a>
+    </div>
+
+    <script>
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
